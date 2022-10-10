@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "550231900255",
+    "project_id": "maintenize",
+    "storage_bucket": "maintenize.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550231900255:android:ff56a452fcfd5342b2dbea",
+        "android_client_info": {
+          "package_name": "com.aplanetbit.maintenize"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550231900255-3e7fnbohe4q4io3bgmj2a8qthrs1453h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKJnoBC3duDURP3a9JOJRaRIrwcgEGakI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550231900255-3e7fnbohe4q4io3bgmj2a8qthrs1453h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "550231900255-am2mjfmqjtjtbb2j4mrir1femkpkiu43.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.aplanetbit.maintenize"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
