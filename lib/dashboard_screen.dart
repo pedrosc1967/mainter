@@ -21,7 +21,7 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen>
     with SingleTickerProviderStateMixin, TransitionRouteAware {
-  Future<bool> _goToLogin(BuildContext context) async {
+  Future<bool> goToLogin(BuildContext context) async {
     await FirebaseAuth.instance.signOut();
     return Navigator.of(context)
         .pushReplacementNamed('/auth')
@@ -71,12 +71,14 @@ class _DashboardScreenState extends State<DashboardScreen>
     final menuBtn = IconButton(
       color: theme.colorScheme.secondary,
       icon: const Icon(FontAwesomeIcons.bars),
-      onPressed: () {},
+      onPressed: () {
+        //Menu itmes are to be put in here.
+      },
     );
     final signOutBtn = IconButton(
       icon: const Icon(FontAwesomeIcons.rightFromBracket),
       color: theme.colorScheme.secondary,
-      onPressed: () => _goToLogin(context),
+      onPressed: () => goToLogin(context),
     );
     final title = Center(
       child: Row(
@@ -290,7 +292,7 @@ class _DashboardScreenState extends State<DashboardScreen>
     final theme = Theme.of(context);
 
     return WillPopScope(
-      onWillPop: () => _goToLogin(context),
+      onWillPop: () => goToLogin(context),
       child: SafeArea(
         child: Scaffold(
           appBar: _buildAppBar(theme),

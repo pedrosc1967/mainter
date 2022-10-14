@@ -1,3 +1,5 @@
+//import 'dart:js';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
@@ -17,7 +19,7 @@ class LoginScreen extends StatelessWidget {
 
   Duration get loginTime => Duration(milliseconds: timeDilation.ceil() * 2250);
 
-  Future<String?> _loginUser(LoginData data) {
+  Future<String?> loginUser(LoginData data) {
     return Future.delayed(loginTime).then((_) async {
       //TODO Implement firebase login here.
       String emailAddress = data.name.toString();
@@ -31,6 +33,7 @@ class LoginScreen extends StatelessWidget {
         debugPrint("LoginPWD: " + hashedPassword);
       } on FirebaseAuthException catch (e) {
         if (e.code == 'user-not-found') {
+          // return "Tuputamadre"; // LoginScreen();
           print('No user found for that email.');
         } else if (e.code == 'wrong-password') {
           print('Invalid pwd');
@@ -302,7 +305,7 @@ class LoginScreen extends StatelessWidget {
         debugPrint('Login info');
         debugPrint('Name: ${loginData.name}');
         //  debugPrint('Password: ${loginData.password}');
-        return _loginUser(loginData);
+        return loginUser(loginData);
       },
       onSignup: (signupData) {
         debugPrint('Signup info');

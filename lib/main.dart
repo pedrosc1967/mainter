@@ -6,6 +6,7 @@ import 'transition_route_observer.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 
 void main() {
@@ -23,18 +24,18 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   Firebase.initializeApp();
 
-  /*
-  FirebaseAuth.instance.idTokenChanges().listen((User? user) {
-    if (user == null) {
-      print('User is currently signed out!');
-    } else {
-      // LoginScreen.routeName
-      print('User is signed in!');
-    }
-  });
-
-  */
-
+  FirebaseAuth.instance.idTokenChanges().listen(
+    (User? user) {
+      if (user == null) {
+        print('User is currently signed out!');
+        Firebase.initializeApp();
+        LoginScreen.routeName;
+      } else {
+        // LoginScreen.routeName
+        print('User is signed in!');
+      }
+    },
+  );
   runApp(const MyApp());
 }
 
