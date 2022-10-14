@@ -1,16 +1,11 @@
-# example
+# Mainter
 
-A new Flutter project.
+A tool for organizing the mainteinance of things.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+It can be used to keep track of mainteinances done to anything: from your bike, motorbike, caravan, car, lorry, house, plane... even yourself!
+And it will remind you what to do on which day and on what thing...
 
-A few resources to get you started if this is your first Flutter project:
+Relax your mind and focus on what interests you more.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
